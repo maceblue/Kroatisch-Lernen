@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Kroatisch lernen v2</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #181a20;
+            --card-2: #1f222a;
+            --text: #f1f5f9;
+            --muted: #94a3b8;
+            --accent: #f97316;
+            --accent-2: #22c55e;
+            --danger: #ef4444;
+            --radius: 18px;
+            --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(249,115,22,0.12), transparent);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        p.subtitle {
+            margin: 4px 0 0;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 8px;
+            padding: 0 16px 12px;
+            overflow-x: auto;
+        }
+
+        .tabs button {
+            flex: 1;
+            min-width: 100px;
+            background: var(--card);
+            color: var(--muted);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 12px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.15s ease;
+        }
+
+        .tabs button.active {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+
+        main {
+            flex: 1;
+            padding: 0 16px 24px;
+            overflow-y: auto;
+        }
+
+        .view {
+            display: none;
+            animation: fadeIn 0.25s ease;
+        }
+
+        .view.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 14px;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .stat {
+            background: var(--card-2);
+            border-radius: 14px;
+            padding: 16px 8px;
+            text-align: center;
+        }
+
+        .stat .value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .stat .label {
+            font-size: 0.75rem;
+            color: var(--muted);
+            margin-top: 4px;
+        }
+
+        .progress-bar {
+            background: var(--card-2);
+            border-radius: 10px;
+            height: 12px;
+            overflow: hidden;
+            margin-bottom: 6px;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            height: 100%;
+            width: 0%;
+            transition: width 0.4s ease;
+        }
+
+        .progress-label {
+            font-size: 0.8rem;
+            color: var(--muted);
+            text-align: right;
+        }
+
+        .word-card {
+            background: linear-gradient(135deg, var(--card), var(--card-2));
+        }
+
+        .word-card .de {
+            font-size: 1.1rem;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+
+        .word-card .hr {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 12px;
+        }
+
+        .word-card .example {
+            font-size: 0.9rem;
+            color: var(--muted);
+            font-style: italic;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 12px;
+        }
+
+        .btn-row {
+            display: flex;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        button {
+            border: none;
+            border-radius: 12px;
+            padding: 12px 18px;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: transform 0.1s ease, opacity 0.15s ease;
+        }
+
+        button:active {
+            transform: scale(0.97);
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+            flex: 1;
+        }
+
+        .btn-secondary {
+            background: var(--card-2);
+            color: var(--text);
+        }
+
+        .btn-success {
+            background: var(--accent-2);
+            color: #fff;
+            flex: 1;
+        }
+
+        .btn-danger {
+            background: var(--danger);
+            color: #fff;
+            flex: 1;
+        }
+
+        .quiz-question {
+            font-size: 1.3rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+
+        .quiz-counter {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .quiz-question .hint {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-top: 6px;
+        }
+
+        .quiz-speak-word {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 50%;
+            color: var(--accent);
+            width: 42px;
+            height: 42px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin: 10px auto 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .quiz-speak-word:active {
+            background: rgba(255,255,255,0.08);
+        }
+
+        .quiz-options {
+            display: grid;
+            gap: 10px;
+        }
+
+        .quiz-option {
+            background: var(--card-2);
+            color: var(--text);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 16px;
+            border-radius: 14px;
+            font-size: 1rem;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .quiz-option.correct {
+            background: rgba(34,197,94,0.18);
+            border-color: var(--accent-2);
+        }
+
+        .quiz-option.wrong {
+            background: rgba(239,68,68,0.18);
+            border-color: var(--danger);
+        }
+
+        .quiz-option:disabled {
+            opacity: 0.8;
+            cursor: default;
+        }
+
+        .feedback {
+            text-align: center;
+            padding: 14px;
+            border-radius: 12px;
+            margin-top: 16px;
+            font-weight: 500;
+            display: none;
+        }
+
+        .feedback.show {
+            display: block;
+        }
+
+        .feedback.correct {
+            background: rgba(34,197,94,0.12);
+            color: var(--accent-2);
+        }
+
+        .feedback.wrong {
+            background: rgba(239,68,68,0.12);
+            color: var(--danger);
+        }
+
+        .search-box {
+            width: 100%;
+            background: var(--card-2);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 12px 14px;
+            color: var(--text);
+            font-size: 1rem;
+            margin-bottom: 14px;
+            outline: none;
+        }
+
+        .search-box::placeholder {
+            color: var(--muted);
+        }
+
+        .vocab-list {
+            display: grid;
+            gap: 10px;
+        }
+
+        .vocab-item {
+            background: var(--card-2);
+            border-radius: 14px;
+            padding: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .vocab-item .hr {
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .vocab-item .de {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-top: 2px;
+        }
+
+        .vocab-item .star {
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: var(--muted);
+        }
+
+        .vocab-item .star.active {
+            color: var(--accent);
+        }
+
+        .empty {
+            text-align: center;
+            color: var(--muted);
+            padding: 40px 20px;
+        }
+
+        .result-summary {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .result-summary .score {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .result-summary .label {
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🇭🇷 Kroatisch lernen</h1>
+        <p class="subtitle">Vokabeln, Quiz & Fortschritt</p>
+    </header>
+
+    <nav class="tabs">
+        <button class="active" data-view="learn">Lernen</button>
+        <button data-view="quiz">Quiz</button>
+        <button data-view="vocab">Vokabeln</button>
+    </nav>
+
+    <main>
+        <!-- Lernen -->
+        <section class="view active" id="view-learn">
+            <div class="stat-grid">
+                <div class="stat">
+                    <div class="value" id="stat-total">0</div>
+                    <div class="label">Vokabeln</div>
+                </div>
+                <div class="stat">
+                    <div class="value" id="stat-known">0</div>
+                    <div class="label">Gelernt</div>
+                </div>
+                <div class="stat">
+                    <div class="value" id="stat-streak">0</div>
+                    <div class="label">Serie</div>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="progress-label" id="progress-label">0 % gelernt</div>
+
+            <div class="card word-card" id="learn-card">
+                <div class="de" id="learn-de">Laden...</div>
+                <div class="hr" id="learn-hr">Laden...</div>
+                <div class="example" id="learn-example"></div>
+                <div class="btn-row">
+                    <button class="btn-secondary" id="btn-play" title="Vorlesen">🔊</button>
+                    <button class="btn-success" id="btn-known">Weiß ich ✓</button>
+                    <button class="btn-danger" id="btn-unknown">Noch lernen ✕</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz -->
+        <section class="view" id="view-quiz">
+            <div class="card" id="quiz-card">
+                <div class="quiz-header">
+                    <span class="quiz-counter" id="quiz-counter">Frage 1/5</span>
+                </div>
+                <div class="quiz-question">
+                    <div id="quiz-question">Laden...</div>
+                    <button class="quiz-speak-word" id="btn-speak-word" style="display:none" title="Wort vorlesen">🔊</button>
+                    <div class="hint" id="quiz-hint"></div>
+                </div>
+                <div class="quiz-options" id="quiz-options"></div>
+                <div class="feedback" id="quiz-feedback"></div>
+                <div class="quiz-speak-row" id="quiz-speak-row" style="display:none; margin-top: 14px;">
+                    <button class="btn-secondary" id="btn-speak-answer" style="width:100%">🔊 Richtige Antwort vorlesen</button>
+                </div>
+                <div class="btn-row" id="quiz-next-row" style="display:none; margin-top: 16px;">
+                    <button class="btn-primary" id="btn-next" style="width:100%">Weiter</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vokabeln -->
+        <section class="view" id="view-vocab">
+            <input type="text" class="search-box" id="vocab-search" placeholder="Vokabel suchen...">
+            <div class="vocab-list" id="vocab-list"></div>
+        </section>
+    </main>
+
+    <script>
+        const API = "/api";
+        let vocab = [];
+        let progress = {};
+        let learnQueue = [];
+        let currentWord = null;
+        let quizItems = [];
+        let quizIndex = 0;
+        let quizScore = 0;
+        let streak = 0;
+
+        function loadLocalProgress() {
+            try {
+                const raw = localStorage.getItem("croatian-progress");
+                if (raw) return JSON.parse(raw);
+            } catch (e) { console.error(e); }
+            return {};
+        }
+
+        async function saveProgress() {
+            try {
+                localStorage.setItem("croatian-progress", JSON.stringify(progress));
+            } catch (e) { console.error("localStorage save failed", e); }
+        }
+
+        // Tabs
+        document.querySelectorAll(".tabs button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                document.querySelectorAll(".tabs button").forEach(b => b.classList.remove("active"));
+                document.querySelectorAll(".view").forEach(v => v.classList.remove("active"));
+                btn.classList.add("active");
+                document.getElementById(`view-${btn.dataset.view}`).classList.add("active");
+                if (btn.dataset.view === "learn") loadLearnWord();
+                if (btn.dataset.view === "quiz") startQuiz();
+                if (btn.dataset.view === "vocab") renderVocab();
+            });
+        });
+
+        async function init() {
+            vocab = await fetch("vocab.json").then(r => r.json());
+            progress = loadLocalProgress();
+            updateStats();
+            loadLearnWord();
+        }
+
+        function updateStats() {
+            const total = vocab.length;
+            const known = Object.values(progress).filter(x => x.known).length;
+            const percent = total ? Math.round((known / total) * 100) : 0;
+            document.getElementById("stat-total").textContent = total;
+            document.getElementById("stat-known").textContent = known;
+            document.getElementById("stat-streak").textContent = streak;
+            document.getElementById("progress-fill").style.width = `${percent}%`;
+            document.getElementById("progress-label").textContent = `${percent} % gelernt`;
+        }
+
+        function getPriorityQueue() {
+            // Words least seen or not known come first
+            return [...vocab].sort((a, b) => {
+                const pa = progress[a.de] || { known: false, seen: 0 };
+                const pb = progress[b.de] || { known: false, seen: 0 };
+                if (pa.known !== pb.known) return pa.known ? 1 : -1;
+                return pa.seen - pb.seen;
+            });
+        }
+
+        function loadLearnWord() {
+            const queue = getPriorityQueue();
+            if (!queue.length) return;
+            currentWord = queue[0];
+            document.getElementById("learn-de").textContent = currentWord.de;
+            document.getElementById("learn-hr").textContent = currentWord.hr;
+            document.getElementById("learn-example").textContent = currentWord.example || "";
+        }
+
+        async function markWord(known) {
+            if (!currentWord) return;
+            const entry = progress[currentWord.de] || { seen: 0, known: false };
+            entry.seen += 1;
+            entry.known = known;
+            entry.last = new Date().toISOString();
+            progress[currentWord.de] = entry;
+            await saveProgress();
+            if (known) streak += 1; else streak = 0;
+            updateStats();
+            loadLearnWord();
+        }
+
+        async function saveProgress() {
+            await fetch(`${API}/progress`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(progress)
+            });
+        }
+
+        document.getElementById("btn-known").addEventListener("click", () => markWord(true));
+        document.getElementById("btn-unknown").addEventListener("click", () => markWord(false));
+
+        document.getElementById("btn-play").addEventListener("click", () => {
+            if (!currentWord) return;
+            const u = new SpeechSynthesisUtterance(currentWord.hr);
+            u.lang = "hr-HR";
+            u.rate = 0.9;
+            speechSynthesis.speak(u);
+        });
+
+        // Quiz
+        function startQuiz() {
+            const pool = vocab.filter(v => {
+                const p = progress[v.de];
+                return !p || !p.known || Math.random() < 0.3;
+            });
+            quizItems = pool.length >= 5 ? randomSample(pool, 5) : randomSample(vocab, Math.min(5, vocab.length));
+            quizIndex = 0;
+            quizScore = 0;
+            renderQuizQuestion();
+        }
+
+        function randomSample(arr, n) {
+            const shuffled = [...arr].sort(() => Math.random() - 0.5);
+            return shuffled.slice(0, n);
+        }
+
+        function renderQuizQuestion() {
+            if (quizIndex >= quizItems.length) {
+                renderQuizResult();
+                return;
+            }
+            const item = quizItems[quizIndex];
+            const askGerman = Math.random() < 0.5;
+            const questionText = askGerman
+                ? `Wie heißt „${item.de}“ auf Kroatisch?`
+                : `Was bedeutet „${item.hr}“?`;
+            document.getElementById("quiz-question").textContent = questionText;
+            document.getElementById("quiz-hint").textContent = "";
+            document.getElementById("quiz-hint").style.display = "none";
+            document.getElementById("quiz-counter").textContent = `Frage ${quizIndex + 1}/${quizItems.length}`;
+
+            const speakBtn = document.getElementById("btn-speak-word");
+            if (askGerman) {
+                speakBtn.style.display = "none";
+            } else {
+                speakBtn.style.display = "flex";
+                speakBtn.onclick = () => {
+                    const u = new SpeechSynthesisUtterance(item.hr);
+                    u.lang = "hr-HR";
+                    u.rate = 0.9;
+                    speechSynthesis.speak(u);
+                };
+            }
+
+            const correct = askGerman ? item.hr : item.de;
+            const others = vocab
+                .filter(v => v.de !== item.de)
+                .sort(() => Math.random() - 0.5)
+                .slice(0, 3)
+                .map(v => askGerman ? v.hr : v.de);
+            const options = [correct, ...others].sort(() => Math.random() - 0.5);
+
+            const container = document.getElementById("quiz-options");
+            container.innerHTML = "";
+            const fb = document.getElementById("quiz-feedback");
+            fb.className = "feedback";
+            fb.textContent = "";
+            document.getElementById("quiz-next-row").style.display = "none";
+            document.getElementById("quiz-speak-row").style.display = "none";
+            const oldSpeakBtn = document.getElementById("btn-speak-answer");
+            if (oldSpeakBtn) oldSpeakBtn.replaceWith(oldSpeakBtn.cloneNode(true));
+
+            options.forEach(opt => {
+                const btn = document.createElement("button");
+                btn.className = "quiz-option";
+                btn.textContent = opt;
+                btn.onclick = () => {
+                    const isCorrect = opt === correct;
+                    document.querySelectorAll(".quiz-option").forEach(b => {
+                        b.disabled = true;
+                        if (b.textContent === correct) b.classList.add("correct");
+                    });
+
+                    if (isCorrect) {
+                        quizScore += 1;
+                        fb.textContent = "Richtig! 🎉";
+                        fb.className = "feedback correct show";
+                    } else {
+                        btn.classList.add("wrong");
+                        fb.textContent = `Falsch. Richtig wäre: ${correct}`;
+                        fb.className = "feedback wrong show";
+                    }
+
+                    // Show example hint after answering
+                    const hintEl = document.getElementById("quiz-hint");
+                    hintEl.textContent = item.example || "";
+                    hintEl.style.display = "block";
+
+                    if (askGerman) {
+                        const newSpeakBtn = document.getElementById("btn-speak-answer");
+                        newSpeakBtn.onclick = () => {
+                            const u = new SpeechSynthesisUtterance(correct);
+                            u.lang = "hr-HR";
+                            u.rate = 0.9;
+                            speechSynthesis.speak(u);
+                        };
+                        document.getElementById("quiz-speak-row").style.display = "block";
+                    }
+
+                    document.getElementById("quiz-next-row").style.display = "flex";
+                };
+                container.appendChild(btn);
+            });
+        }
+
+        document.getElementById("btn-next").addEventListener("click", () => {
+            quizIndex += 1;
+            renderQuizQuestion();
+        });
+
+        function renderQuizResult() {
+            const card = document.getElementById("quiz-card");
+            card.innerHTML = `
+                <div class="result-summary">
+                    <div class="score">${quizScore}/${quizItems.length}</div>
+                    <div class="label">${quizScore === quizItems.length ? "Perfekt! 🎉" : "Weiter so!"}</div>
+                    <button class="btn-primary" id="btn-restart" style="width:100%">Nochmal spielen</button>
+                </div>
+            `;
+            document.getElementById("btn-restart").addEventListener("click", () => {
+                card.innerHTML = `
+                    <div class="quiz-header">
+                        <span class="quiz-counter" id="quiz-counter">Frage 1/5</span>
+                    </div>
+                    <div class="quiz-question">
+                        <div id="quiz-question">Laden...</div>
+                        <button class="quiz-speak-word" id="btn-speak-word" style="display:none" title="Wort vorlesen">🔊</button>
+                        <div class="hint" id="quiz-hint"></div>
+                    </div>
+                    <div class="quiz-options" id="quiz-options"></div>
+                    <div class="feedback" id="quiz-feedback"></div>
+                    <div class="quiz-speak-row" id="quiz-speak-row" style="display:none; margin-top: 14px;">
+                        <button class="btn-secondary" id="btn-speak-answer" style="width:100%">🔊 Richtige Antwort vorlesen</button>
+                    </div>
+                    <div class="btn-row" id="quiz-next-row" style="display:none; margin-top: 16px;">
+                        <button class="btn-primary" id="btn-next" style="width:100%">Weiter</button>
+                    </div>
+                `;
+                document.getElementById("btn-next").addEventListener("click", () => {
+                    quizIndex += 1;
+                    renderQuizQuestion();
+                });
+                startQuiz();
+            });
+        }
+
+        // Vocab list
+        function renderVocab(filter = "") {
+            const list = document.getElementById("vocab-list");
+            list.innerHTML = "";
+            const f = filter.toLowerCase();
+            const items = vocab.filter(v => v.de.toLowerCase().includes(f) || v.hr.toLowerCase().includes(f));
+            items.forEach(v => {
+                const div = document.createElement("div");
+                div.className = "vocab-item";
+                const known = progress[v.de]?.known;
+                div.innerHTML = `
+                    <div>
+                        <div class="hr">${v.hr}</div>
+                        <div class="de">${v.de}${v.example ? ` · ${v.example}` : ""}</div>
+                    </div>
+                    <div class="star ${known ? 'active' : ''}" data-de="${v.de}">${known ? '★' : '☆'}</div>
+                `;
+                div.querySelector(".star").addEventListener("click", async (e) => {
+                    const de = e.target.dataset.de;
+                    const p = progress[de] || { seen: 0, known: false };
+                    p.known = !p.known;
+                    p.seen += 1;
+                    progress[de] = p;
+                    await saveProgress();
+                    renderVocab(filter);
+                    updateStats();
+                });
+                list.appendChild(div);
+            });
+        }
+
+        document.getElementById("vocab-search").addEventListener("input", (e) => {
+            renderVocab(e.target.value);
+        });
+
+        init();
+    </script>
+</body>
+</html>

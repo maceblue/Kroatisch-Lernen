@@ -1,0 +1,997 @@
+[
+  {
+    "de": "Hallo",
+    "hr": "Bok",
+    "example": "Bok, kako si?"
+  },
+  {
+    "de": "Guten Morgen",
+    "hr": "Dobro jutro",
+    "example": "Dobro jutro!"
+  },
+  {
+    "de": "Guten Tag",
+    "hr": "Dobar dan",
+    "example": "Dobar dan, hvala."
+  },
+  {
+    "de": "Gute Nacht",
+    "hr": "Laku noć",
+    "example": "Laku noć!"
+  },
+  {
+    "de": "Auf Wiedersehen",
+    "hr": "Doviđenja",
+    "example": "Doviđenja, vidimo se sutra."
+  },
+  {
+    "de": "Danke",
+    "hr": "Hvala",
+    "example": "Hvala lijepa!"
+  },
+  {
+    "de": "Bitte",
+    "hr": "Molim",
+    "example": "Molim, sjednite."
+  },
+  {
+    "de": "Entschuldigung",
+    "hr": "Oprosti",
+    "example": "Oprosti, kako se kaže...?"
+  },
+  {
+    "de": "Ja",
+    "hr": "Da",
+    "example": "Da, razumijem."
+  },
+  {
+    "de": "Nein",
+    "hr": "Ne",
+    "example": "Ne, hvala."
+  },
+  {
+    "de": "Wie geht's?",
+    "hr": "Kako si?",
+    "example": "Bok, kako si danas?"
+  },
+  {
+    "de": "Mir geht's gut",
+    "hr": "Dobro sam",
+    "example": "Dobro sam, hvala."
+  },
+  {
+    "de": "Wie bitte?",
+    "hr": "Molim?",
+    "example": "Molim? Nisam razumio."
+  },
+  {
+    "de": "Ich verstehe nicht",
+    "hr": "Ne razumijem",
+    "example": "Ne razumijem, možeš li ponoviti?"
+  },
+  {
+    "de": "Wie heißt du?",
+    "hr": "Kako se zoveš?",
+    "example": "Kako se zoveš? Ja sam Marcus."
+  },
+  {
+    "de": "Ich heiße ...",
+    "hr": "Zovem se ...",
+    "example": "Zovem se Marcus."
+  },
+  {
+    "de": "Woher kommst du?",
+    "hr": "Odakle dolaziš?",
+    "example": "Odakle dolaziš? Iz Njemačke."
+  },
+  {
+    "de": "Ich komme aus Deutschland",
+    "hr": "Dolazim iz Njemačke",
+    "example": "Dolazim iz Njemačke, a živim u Hrvatskoj."
+  },
+  {
+    "de": "Bier",
+    "hr": "Pivo",
+    "example": "Jedno pivo, molim."
+  },
+  {
+    "de": "Kaffee",
+    "hr": "Kava",
+    "example": "Želim kavu, molim."
+  },
+  {
+    "de": "Wasser",
+    "hr": "Voda",
+    "example": "Vodu, molim."
+  },
+  {
+    "de": "Brot",
+    "hr": "Kruh",
+    "example": "Kruh i maslac, molim."
+  },
+  {
+    "de": "Fisch",
+    "hr": "Riba",
+    "example": "Riba je svježa."
+  },
+  {
+    "de": "Fleisch",
+    "hr": "Meso",
+    "example": "Ne jedem meso."
+  },
+  {
+    "de": "Gemüse",
+    "hr": "Povrće",
+    "example": "Volim povrće."
+  },
+  {
+    "de": "Obst",
+    "hr": "Voće",
+    "example": "Voće je slatko."
+  },
+  {
+    "de": "Rechnung",
+    "hr": "Račun",
+    "example": "Račun, molim."
+  },
+  {
+    "de": "Tisch",
+    "hr": "Stol",
+    "example": "Stol je slobodan."
+  },
+  {
+    "de": "Stuhl",
+    "hr": "Stolica",
+    "example": "Stolica je udobna."
+  },
+  {
+    "de": "Zimmer",
+    "hr": "Soba",
+    "example": "Soba je lijepa."
+  },
+  {
+    "de": "Bad",
+    "hr": "Kupaonica",
+    "example": "Kupaonica je gore."
+  },
+  {
+    "de": "Schlüssel",
+    "hr": "Ključ",
+    "example": "Gdje je ključ?"
+  },
+  {
+    "de": "Strand",
+    "hr": "Plaža",
+    "example": "Plaža je blizu."
+  },
+  {
+    "de": "Meer",
+    "hr": "More",
+    "example": "More je toplo."
+  },
+  {
+    "de": "Sonne",
+    "hr": "Sunce",
+    "example": "Sunce sija."
+  },
+  {
+    "de": "Mond",
+    "hr": "Mjesec",
+    "example": "Mjesec je pun."
+  },
+  {
+    "de": "Heute",
+    "hr": "Danas",
+    "example": "Danas je lijepo."
+  },
+  {
+    "de": "Morgen",
+    "hr": "Sutra",
+    "example": "Vidimo se sutra."
+  },
+  {
+    "de": "Gestern",
+    "hr": "Jučer",
+    "example": "Jučer je bilo kišno."
+  },
+  {
+    "de": "Jetzt",
+    "hr": "Sada",
+    "example": "Sada je dobro."
+  },
+  {
+    "de": "Später",
+    "hr": "Kasnije",
+    "example": "Razgovaramo kasnije."
+  },
+  {
+    "de": "Früh",
+    "hr": "Rano",
+    "example": "Ustajem rano."
+  },
+  {
+    "de": "Links",
+    "hr": "Lijevo",
+    "example": "Skreni lijevo."
+  },
+  {
+    "de": "Rechts",
+    "hr": "Desno",
+    "example": "Skreni desno."
+  },
+  {
+    "de": "Geradeaus",
+    "hr": "Ravno",
+    "example": "Idi ravno."
+  },
+  {
+    "de": "Hier",
+    "hr": "Ovdje",
+    "example": "Ovdje je lijepo."
+  },
+  {
+    "de": "Dort",
+    "hr": "Tamo",
+    "example": "Tamo je plaža."
+  },
+  {
+    "de": "Wie viel kostet das?",
+    "hr": "Koliko košta?",
+    "example": "Koliko košta ovo pivo?"
+  },
+  {
+    "de": "Ich möchte ...",
+    "hr": "Želim ...",
+    "example": "Želim kavu, molim."
+  },
+  {
+    "de": "Ich brauche ...",
+    "hr": "Treba mi ...",
+    "example": "Treba mi voda."
+  },
+  {
+    "de": "Wo ist ...?",
+    "hr": "Gdje je ...?",
+    "example": "Gdje je plaža?"
+  },
+  {
+    "de": "Wann?",
+    "hr": "Kada?",
+    "example": "Kada dolaziš?"
+  },
+  {
+    "de": "Warum?",
+    "hr": "Zašto?",
+    "example": "Zašto si kasnio?"
+  },
+  {
+    "de": "Wie?",
+    "hr": "Kako?",
+    "example": "Kako si to napravio?"
+  },
+  {
+    "de": "Wer?",
+    "hr": "Tko?",
+    "example": "Tko je to?"
+  },
+  {
+    "de": "Was?",
+    "hr": "Što?",
+    "example": "Što želiš?"
+  },
+  {
+    "de": "Ich liebe dich",
+    "hr": "Volim te",
+    "example": "Volim te puno."
+  },
+  {
+    "de": "Glückwunsch",
+    "hr": "Čestitam",
+    "example": "Čestitam na rođendanu!"
+  },
+  {
+    "de": "Alles Gute",
+    "hr": "Sve najbolje",
+    "example": "Sve najbolje u Novoj godini!"
+  },
+  {
+    "de": "Prost",
+    "hr": "Živjeli",
+    "example": "Živjeli!"
+  },
+  {
+    "de": "Guten Appetit",
+    "hr": "Dobar tek",
+    "example": "Dobar tek!"
+  },
+  {
+    "de": "Kein Problem",
+    "hr": "Nema problema",
+    "example": "Nema problema, rado ću pomoći."
+  },
+  {
+    "de": "Vorsicht",
+    "hr": "Pazi",
+    "example": "Pazi, auto!"
+  },
+  {
+    "de": "Achtung",
+    "hr": "Pozor",
+    "example": "Pozor, stepenice!"
+  },
+  {
+    "de": "Toilette",
+    "hr": "Toalet",
+    "example": "Gdje je toalet?"
+  },
+  {
+    "de": "Krankenhaus",
+    "hr": "Bolnica",
+    "example": "Gdje je bolnica?"
+  },
+  {
+    "de": "Apotheke",
+    "hr": "Ljekarna",
+    "example": "Treba mi ljekarna."
+  },
+  {
+    "de": "Polizei",
+    "hr": "Policija",
+    "example": "Zovi policiju!"
+  },
+  {
+    "de": "Feuerwehr",
+    "hr": "Vatrogasci",
+    "example": "Zovi vatrogasce!"
+  },
+  {
+    "de": "Hilfe",
+    "hr": "Pomoć",
+    "example": "Pomoć!"
+  },
+  {
+    "de": "Ich habe mich verlaufen",
+    "hr": "Izgubio sam se",
+    "example": "Izgubio sam se, možeš li pomoći?"
+  },
+  {
+    "de": "Wie spät ist es?",
+    "hr": "Koliko je sati?",
+    "example": "Koliko je sati?"
+  },
+  {
+    "de": "Uhr",
+    "hr": "Sat",
+    "example": "Koliko je sati?"
+  },
+  {
+    "de": "Auto",
+    "hr": "Auto",
+    "example": "Moj auto je plavi."
+  },
+  {
+    "de": "Bus",
+    "hr": "Autobus",
+    "example": "Autobus je pun."
+  },
+  {
+    "de": "Flugzeug",
+    "hr": "Avion",
+    "example": "Avion kasni."
+  },
+  {
+    "de": "Fähre",
+    "hr": "Trajekt",
+    "example": "Trajekt ide u deset sati."
+  },
+  {
+    "de": "Tankstelle",
+    "hr": "Benzinska postaja",
+    "example": "Gdje je benzinska postaja?"
+  },
+  {
+    "de": "Parkplatz",
+    "hr": "Parkiralište",
+    "example": "Gdje je parkiralište?"
+  },
+  {
+    "de": "Straße",
+    "hr": "Ulica",
+    "example": "Koja je ovo ulica?"
+  },
+  {
+    "de": "Platz",
+    "hr": "Trg",
+    "example": "Sastanak je na trgu."
+  },
+  {
+    "de": "Brücke",
+    "hr": "Most",
+    "example": "Most je visok."
+  },
+  {
+    "de": "Insel",
+    "hr": "Otok",
+    "example": "Otok je lijep."
+  },
+  {
+    "de": "Berg",
+    "hr": "Planina",
+    "example": "Planina je visoka."
+  },
+  {
+    "de": "Wald",
+    "hr": "Šuma",
+    "example": "Šuma je zelena."
+  },
+  {
+    "de": "Fluss",
+    "hr": "Rijeka",
+    "example": "Rijeka je duboka."
+  },
+  {
+    "de": "See",
+    "hr": "Jezero",
+    "example": "Jezero je mirno."
+  },
+  {
+    "de": "Meer",
+    "hr": "More",
+    "example": "More je plavo."
+  },
+  {
+    "de": "Hund",
+    "hr": "Pas",
+    "example": "Pas je vjeran."
+  },
+  {
+    "de": "Katze",
+    "hr": "Mačka",
+    "example": "Mačka spava."
+  },
+  {
+    "de": "Vogel",
+    "hr": "Ptica",
+    "example": "Ptica pjeva."
+  },
+  {
+    "de": "Fisch",
+    "hr": "Riba",
+    "example": "Riba pliva."
+  },
+  {
+    "de": "Kuh",
+    "hr": "Krava",
+    "example": "Krava daje mlijeko."
+  },
+  {
+    "de": "Schaf",
+    "hr": "Ovca",
+    "example": "Ovca je meka."
+  },
+  {
+    "de": "Pferd",
+    "hr": "Konj",
+    "example": "Konj trči."
+  },
+  {
+    "de": "Schwein",
+    "hr": "Svinja",
+    "example": "Svinja je u štali."
+  },
+  {
+    "de": "Huhn",
+    "hr": "Kokoš",
+    "example": "Kokoš nosi jaje."
+  },
+  {
+    "de": "Rot",
+    "hr": "Crveno",
+    "example": "Auto je crveno."
+  },
+  {
+    "de": "Blau",
+    "hr": "Plavo",
+    "example": "More je plavo."
+  },
+  {
+    "de": "Grün",
+    "hr": "Zeleno",
+    "example": "Trava je zelena."
+  },
+  {
+    "de": "Gelb",
+    "hr": "Žuto",
+    "example": "Sunce je žuto."
+  },
+  {
+    "de": "Schwarz",
+    "hr": "Crno",
+    "example": "Mačka je crna."
+  },
+  {
+    "de": "Weiß",
+    "hr": "Bijelo",
+    "example": "Zid je bijel."
+  },
+  {
+    "de": "Groß",
+    "hr": "Veliko",
+    "example": "Kuća je velika."
+  },
+  {
+    "de": "Klein",
+    "hr": "Malo",
+    "example": "Poklon je malo."
+  },
+  {
+    "de": "Schnell",
+    "hr": "Brzo",
+    "example": "Auto ide brzo."
+  },
+  {
+    "de": "Langsam",
+    "hr": "Sporo",
+    "example": "Hodaj sporo."
+  },
+  {
+    "de": "Gut",
+    "hr": "Dobro",
+    "example": "To je dobro."
+  },
+  {
+    "de": "Schlecht",
+    "hr": "Loše",
+    "example": "Vrijeme je loše."
+  },
+  {
+    "de": "Schön",
+    "hr": "Lijepo",
+    "example": "Lijepo je danas."
+  },
+  {
+    "de": "Hässlich",
+    "hr": "Ružno",
+    "example": "To je ružno."
+  },
+  {
+    "de": "Neu",
+    "hr": "Novo",
+    "example": "Auto je novo."
+  },
+  {
+    "de": "Alt",
+    "hr": "Staro",
+    "example": "Kuća je stara."
+  },
+  {
+    "de": "Jung",
+    "hr": "Mlado",
+    "example": "On je mlad."
+  },
+  {
+    "de": "Heiß",
+    "hr": "Vruće",
+    "example": "Kava je vruća."
+  },
+  {
+    "de": "Kalt",
+    "hr": "Hladno",
+    "example": "Vanjski je hladno."
+  },
+  {
+    "de": "Warm",
+    "hr": "Toplo",
+    "example": "Voda je topla."
+  },
+  {
+    "de": "Eins",
+    "hr": "Jedan",
+    "example": "Jedan kavu, molim."
+  },
+  {
+    "de": "Zwei",
+    "hr": "Dva",
+    "example": "Dva piva, molim."
+  },
+  {
+    "de": "Drei",
+    "hr": "Tri",
+    "example": "Imam tri sestre."
+  },
+  {
+    "de": "Vier",
+    "hr": "Četiri",
+    "example": "Četiri stola."
+  },
+  {
+    "de": "Fünf",
+    "hr": "Pet",
+    "example": "Pet minuta."
+  },
+  {
+    "de": "Sechs",
+    "hr": "Šest",
+    "example": "Šest sati."
+  },
+  {
+    "de": "Sieben",
+    "hr": "Sedam",
+    "example": "Sedam dana."
+  },
+  {
+    "de": "Acht",
+    "hr": "Osam",
+    "example": "Osam ljudi."
+  },
+  {
+    "de": "Neun",
+    "hr": "Devet",
+    "example": "Devet života."
+  },
+  {
+    "de": "Zehn",
+    "hr": "Deset",
+    "example": "Deset kuna."
+  },
+  {
+    "de": "Hundert",
+    "hr": "Sto",
+    "example": "Sto kuna."
+  },
+  {
+    "de": "Tausend",
+    "hr": "Tisuću",
+    "example": "Tisuću zahvala."
+  },
+  {
+    "de": "Ich",
+    "hr": "Ja",
+    "example": "Ja sam Marcus."
+  },
+  {
+    "de": "Du",
+    "hr": "Ti",
+    "example": "Ti si dobar."
+  },
+  {
+    "de": "Er/Sie",
+    "hr": "On/Ona",
+    "example": "On je visok, ona je lijepa."
+  },
+  {
+    "de": "Wir",
+    "hr": "Mi",
+    "example": "Mi idemo u kino."
+  },
+  {
+    "de": "Ihr",
+    "hr": "Vi",
+    "example": "Vi ste dobri."
+  },
+  {
+    "de": "Sie (Plural)",
+    "hr": "Oni/One",
+    "example": "Oni dolaze kasno."
+  },
+  {
+    "de": "Familie",
+    "hr": "Obitelj",
+    "example": "Moja obitelj je velika."
+  },
+  {
+    "de": "Mutter",
+    "hr": "Majka",
+    "example": "Moja majka je ljubazna."
+  },
+  {
+    "de": "Vater",
+    "hr": "Otac",
+    "example": "Moj otac je strog."
+  },
+  {
+    "de": "Bruder",
+    "hr": "Brat",
+    "example": "Moj brat je mlad."
+  },
+  {
+    "de": "Schwester",
+    "hr": "Sestra",
+    "example": "Moja sestra je pametna."
+  },
+  {
+    "de": "Kind",
+    "hr": "Dijete",
+    "example": "Dijete se igra."
+  },
+  {
+    "de": "Freund",
+    "hr": "Prijatelj",
+    "example": "On je moj prijatelj."
+  },
+  {
+    "de": "Freundin",
+    "hr": "Prijateljica",
+    "example": "Ona je moja prijateljica."
+  },
+  {
+    "de": "Nachbar",
+    "hr": "Susjed",
+    "example": "Susjed je ljubazan."
+  },
+  {
+    "de": "Lebensmittelgeschäft",
+    "hr": "Trgovina",
+    "example": "Idem u trgovinu."
+  },
+  {
+    "de": "Bäckerei",
+    "hr": "Pekara",
+    "example": "U pekari je svjež kruh."
+  },
+  {
+    "de": "Metzgerei",
+    "hr": "Mesnica",
+    "example": "Mesnica je na uglu."
+  },
+  {
+    "de": "Markt",
+    "hr": "Tržnica",
+    "example": "Tržnica je puna voća."
+  },
+  {
+    "de": "Restaurant",
+    "hr": "Restoran",
+    "example": "Idemo u restoran."
+  },
+  {
+    "de": "Café",
+    "hr": "Kafić",
+    "example": "Sjedimo u kafiću."
+  },
+  {
+    "de": "Bar",
+    "hr": "Bar",
+    "example": "Bar je otvoren do kasno."
+  },
+  {
+    "de": "Hotel",
+    "hr": "Hotel",
+    "example": "Hotel je blizu plaže."
+  },
+  {
+    "de": "Campingplatz",
+    "hr": "Kamp",
+    "example": "Boravimo u kampu."
+  },
+  {
+    "de": "Strandbar",
+    "hr": "Plažni bar",
+    "example": "Plažni bar ima dobru kavu."
+  },
+  {
+    "de": "Bucht",
+    "hr": "Uvala",
+    "example": "Uvala je lijepa i mirna."
+  },
+  {
+    "de": "Hafen",
+    "hr": "Luka",
+    "example": "Brod je u luci."
+  },
+  {
+    "de": "Leuchtturm",
+    "hr": "Svjetionik",
+    "example": "Svjetionik je visok."
+  },
+  {
+    "de": "Stein",
+    "hr": "Kamen",
+    "example": "Kamen je težak."
+  },
+  {
+    "de": "Sand",
+    "hr": "Pijesak",
+    "example": "Pijesak je topao."
+  },
+  {
+    "de": "Welle",
+    "hr": "Val",
+    "example": "Valovi su veliki."
+  },
+  {
+    "de": "Wind",
+    "hr": "Vjetar",
+    "example": "Vjetar je jak."
+  },
+  {
+    "de": "Regen",
+    "hr": "Kiša",
+    "example": "Kiša pada."
+  },
+  {
+    "de": "Schnee",
+    "hr": "Snijeg",
+    "example": "Snijeg je bijel."
+  },
+  {
+    "de": "Gewitter",
+    "hr": "Oluju",
+    "example": "Oluju se bliži."
+  },
+  {
+    "de": "Wolke",
+    "hr": "Oblak",
+    "example": "Oblaci su tamni."
+  },
+  {
+    "de": "Himmel",
+    "hr": "Nebo",
+    "example": "Nebo je plavo."
+  },
+  {
+    "de": "Erde",
+    "hr": "Zemlja",
+    "example": "Zemlja je okrugla."
+  },
+  {
+    "de": "Feuer",
+    "hr": "Vatra",
+    "example": "Vatra je topla."
+  },
+  {
+    "de": "Wasser",
+    "hr": "Voda",
+    "example": "Voda je hladna."
+  },
+  {
+    "de": "Luft",
+    "hr": "Zrak",
+    "example": "Zrak je svjež."
+  },
+  {
+    "de": "Sonne",
+    "hr": "Sunce",
+    "example": "Sunce grije."
+  },
+  {
+    "de": "Sonnenuntergang",
+    "hr": "Zalazak sunca",
+    "example": "Zalazak sunca je lijep."
+  },
+  {
+    "de": "Sonnenaufgang",
+    "hr": "Izlazak sunca",
+    "example": "Izlazak sunca je rano."
+  },
+  {
+    "de": "Tag",
+    "hr": "Dan",
+    "example": "Dobar dan."
+  },
+  {
+    "de": "Woche",
+    "hr": "Tjedan",
+    "example": "Tjedan je dug."
+  },
+  {
+    "de": "Monat",
+    "hr": "Mjesec",
+    "example": "Mjesec je srpanj."
+  },
+  {
+    "de": "Jahr",
+    "hr": "Godina",
+    "example": "Godina je 2026."
+  },
+  {
+    "de": "Stunde",
+    "hr": "Sat",
+    "example": "Sat vremena."
+  },
+  {
+    "de": "Minute",
+    "hr": "Minuta",
+    "example": "Pričekaj minutu."
+  },
+  {
+    "de": "Sekunde",
+    "hr": "Sekunda",
+    "example": "Sekunda je kratka."
+  },
+  {
+    "de": "Montag",
+    "hr": "Ponedjeljak",
+    "example": "Ponedjeljak je prvi dan."
+  },
+  {
+    "de": "Dienstag",
+    "hr": "Utorak",
+    "example": "Utorak je sretan dan."
+  },
+  {
+    "de": "Mittwoch",
+    "hr": "Srijeda",
+    "example": "Srijeda je sredina tjedna."
+  },
+  {
+    "de": "Donnerstag",
+    "hr": "Četvrtak",
+    "example": "Četvrtak je blizu vikenda."
+  },
+  {
+    "de": "Freitag",
+    "hr": "Petak",
+    "example": "Petak je zabavan."
+  },
+  {
+    "de": "Samstag",
+    "hr": "Subota",
+    "example": "Subota je dan odmora."
+  },
+  {
+    "de": "Sonntag",
+    "hr": "Nedjelja",
+    "example": "Nedjelja je obiteljski dan."
+  },
+  {
+    "de": "Januar",
+    "hr": "Siječanj",
+    "example": "Siječanj je hladan."
+  },
+  {
+    "de": "Februar",
+    "hr": "Veljača",
+    "example": "Veljača je kratka."
+  },
+  {
+    "de": "März",
+    "hr": "Ožujak",
+    "example": "Ožujak je proljetni mjesec."
+  },
+  {
+    "de": "April",
+    "hr": "Travanj",
+    "example": "Travanj je kišovit."
+  },
+  {
+    "de": "Mai",
+    "hr": "Svibanj",
+    "example": "Svibanj je lijep."
+  },
+  {
+    "de": "Juni",
+    "hr": "Lipanj",
+    "example": "Lipanj je toplo."
+  },
+  {
+    "de": "Juli",
+    "hr": "Srpanj",
+    "example": "Srpanj je ljetni mjesec."
+  },
+  {
+    "de": "August",
+    "hr": "Kolovoz",
+    "example": "Kolovoz je vruć."
+  },
+  {
+    "de": "September",
+    "hr": "Rujan",
+    "example": "Rujan je miholjsko ljeto."
+  },
+  {
+    "de": "Oktober",
+    "hr": "Listopad",
+    "example": "Listopad je jesenski."
+  },
+  {
+    "de": "November",
+    "hr": "Studeni",
+    "example": "Studeni je hladan."
+  },
+  {
+    "de": "Dezember",
+    "hr": "Prosinac",
+    "example": "Prosinac je blagdanski mjesec."
+  }
+]
