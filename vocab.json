@@ -993,5 +993,185 @@
     "de": "Dezember",
     "hr": "Prosinac",
     "example": "Prosinac je blagdanski mjesec."
+  },
+  {
+    "de": "ich habe",
+    "hr": "ja imam",
+    "example": "Ja imam auto."
+  },
+  {
+    "de": "du hast",
+    "hr": "ti imaš",
+    "example": "Ti imaš kuću."
+  },
+  {
+    "de": "er/sie/es hat",
+    "hr": "on/ona/ono ima",
+    "example": "On ima psa."
+  },
+  {
+    "de": "wir haben",
+    "hr": "mi imamo",
+    "example": "Mi imamo vremena."
+  },
+  {
+    "de": "ihr habt",
+    "hr": "vi imate",
+    "example": "Vi imate pitanje."
+  },
+  {
+    "de": "sie haben",
+    "hr": "oni imaju",
+    "example": "Oni imaju djecu."
+  },
+  {
+    "de": "ich brauche",
+    "hr": "ja trebam",
+    "example": "Ja trebam vodu."
+  },
+  {
+    "de": "du brauchst",
+    "hr": "ti trebaš",
+    "example": "Ti trebaš pomoć."
+  },
+  {
+    "de": "er/sie/es braucht",
+    "hr": "on/ona/ono treba",
+    "example": "On treba novac."
+  },
+  {
+    "de": "wir brauchen",
+    "hr": "mi trebamo",
+    "example": "Mi trebamo kavu."
+  },
+  {
+    "de": "ihr braucht",
+    "hr": "vi trebate",
+    "example": "Vi trebate odmor."
+  },
+  {
+    "de": "sie brauchen",
+    "hr": "oni trebaju",
+    "example": "Oni trebaju informacije."
+  },
+  {
+    "de": "ich bin",
+    "hr": "ja sam",
+    "example": "Ja sam Marcus."
+  },
+  {
+    "de": "du bist",
+    "hr": "ti si",
+    "example": "Ti si dobar prijatelj."
+  },
+  {
+    "de": "er/sie/es ist",
+    "hr": "on/ona/ono je",
+    "example": "On je visok."
+  },
+  {
+    "de": "wir sind",
+    "hr": "mi smo",
+    "example": "Mi smo u kući."
+  },
+  {
+    "de": "ihr seid",
+    "hr": "vi ste",
+    "example": "Vi ste spremni."
+  },
+  {
+    "de": "sie sind",
+    "hr": "oni su",
+    "example": "Oni su sretni."
+  },
+  {
+    "de": "ich feiere",
+    "hr": "ja slavim",
+    "example": "Ja slavim rođendan."
+  },
+  {
+    "de": "du feierst",
+    "hr": "ti slaviš",
+    "example": "Ti slaviš blagdan."
+  },
+  {
+    "de": "er/sie/es feiert",
+    "hr": "on/ona/ono slavi",
+    "example": "On slavi uspjeh."
+  },
+  {
+    "de": "wir feiern",
+    "hr": "mi slavimo",
+    "example": "Mi slavimo godišnjicu."
+  },
+  {
+    "de": "ihr feiert",
+    "hr": "vi slavite",
+    "example": "Vi slavite ljetni praznik."
+  },
+  {
+    "de": "sie feiern",
+    "hr": "oni slave",
+    "example": "Oni slave pobjedu."
+  },
+  {
+    "de": "ich kaufe ein",
+    "hr": "ja kupujem",
+    "example": "Ja kupujem namirnice."
+  },
+  {
+    "de": "du kaufst ein",
+    "hr": "ti kupuješ",
+    "example": "Ti kupuješ poklon."
+  },
+  {
+    "de": "er/sie/es kauft ein",
+    "hr": "on/ona/ono kupuje",
+    "example": "On kupuje hranu."
+  },
+  {
+    "de": "wir kaufen ein",
+    "hr": "mi kupujemo",
+    "example": "Mi kupujemo voće."
+  },
+  {
+    "de": "ihr kauft ein",
+    "hr": "vi kupujete",
+    "example": "Vi kupujete ulaznice."
+  },
+  {
+    "de": "sie kaufen ein",
+    "hr": "oni kupuju",
+    "example": "Oni kupuju namještaj."
+  },
+  {
+    "de": "ich repariere",
+    "hr": "ja popravljam",
+    "example": "Ja popravljam bicikl."
+  },
+  {
+    "de": "du reparierst",
+    "hr": "ti popravljaš",
+    "example": "Ti popravljaš krov."
+  },
+  {
+    "de": "er/sie/es repariert",
+    "hr": "on/ona/ono popravlja",
+    "example": "On popravlja auto."
+  },
+  {
+    "de": "wir reparieren",
+    "hr": "mi popravljamo",
+    "example": "Mi popravljamo ogradu."
+  },
+  {
+    "de": "ihr repariert",
+    "hr": "vi popravljate",
+    "example": "Vi popravljate prozor."
+  },
+  {
+    "de": "sie reparieren",
+    "hr": "oni popravljaju",
+    "example": "Oni popravljaju cestu."
   }
 ]
